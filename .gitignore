@@ -4,3 +4,15 @@ __pycache__/
 venv/
 .env
 .DS_Store
+CLAUDE.md
+PRODUCT.md
+/docs
+/.claude/
+/.superpowers/
+
+# Next.js
+/node_modules
+/.next/
+/out/
+next-env.d.ts
+*.tsbuildinfo
