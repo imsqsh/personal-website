@@ -1,5 +1,5 @@
 :root {
-  color-scheme: light dark;
+  color-scheme: light;
 
   --font-family-serif: var(--font-serif), Georgia, "Times New Roman", serif;
   --font-family-sans: var(--font-sans), -apple-system, BlinkMacSystemFont,
@@ -34,17 +34,4 @@
   --content-max-width: 42rem;
   --page-max-width: 76rem;
   --margin-column-width: 16rem;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --color-bg: #17150f;
-    --color-bg-raised: #201d16;
-    --color-ink: #f2ede1;
-    --color-ink-muted: #b4ac9a;
-    --color-rule: #3a352a;
-    --color-accent: #e2734f;
-    --color-accent-hover: color-mix(in srgb, var(--color-accent) 82%, white);
-    --color-accent-ink: #17150f;
-  }
 }
