@@ -34,10 +34,6 @@ export const siteConfig: SiteConfig = {
     { label: "GitHub", href: "https://github.com/imsqsh" },
     { label: "Email", href: "mailto:mulimani@engineering.upenn.edu" },
     { label: "LinkedIn", href: "https://www.linkedin.com/in/yashmulimani/" },
-    {
-      label: "Resume",
-      href: "/resume.pdf",
-      isPlaceholder: true,
-    },
+    { label: "Resume", href: "https://drive.google.com/file/d/1vHE96Li9kJ6L9X_Qdn1o-Wfj5HBBJ7tC/view?usp=sharing" },
   ],
 };
