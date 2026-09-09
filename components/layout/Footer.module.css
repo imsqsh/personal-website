@@ -6,7 +6,7 @@
   gap: var(--space-4);
   max-width: var(--page-max-width);
   margin: 0 auto;
-  padding: var(--space-6) var(--space-5) var(--space-7);
+  padding: var(--space-7) var(--space-5) var(--space-7);
   border-top: 1px solid var(--color-rule);
   font-family: var(--font-family-mono);
   font-size: var(--step--1);
@@ -44,8 +44,4 @@
 
 .placeholder {
   opacity: 0.5;
-  border: 1px dashed var(--color-rule);
-  border-radius: 50%;
-  padding: var(--space-1);
-  margin: calc(var(--space-1) * -1);
 }

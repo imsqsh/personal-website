@@ -1,9 +1,9 @@
 import type { ComponentType } from "react";
 import { siteConfig } from "@/data/site";
 import {
-  DocumentIcon,
   GitHubIcon,
   GmailIcon,
+  GoogleDocsIcon,
   LinkedInIcon,
 } from "@/components/icons/SocialIcons";
 import styles from "./Footer.module.css";
@@ -12,7 +12,7 @@ const iconByLabel: Record<string, ComponentType<{ className?: string }>> = {
   GitHub: GitHubIcon,
   Email: GmailIcon,
   LinkedIn: LinkedInIcon,
-  Resume: DocumentIcon,
+  Resume: GoogleDocsIcon,
 };
 
 export function Footer() {
