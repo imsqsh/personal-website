@@ -104,35 +104,6 @@
   font-size: var(--step--1);
 }
 
-.socialLine {
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--space-4);
-  list-style: none;
-  margin: var(--space-6) 0 0;
-  padding-top: var(--space-5);
-  border-top: 1px solid var(--color-rule);
-  font-family: var(--font-family-mono);
-  font-size: var(--step--1);
-}
-
-.socialLine a {
-  color: var(--color-ink-muted);
-  text-decoration: underline;
-  text-underline-offset: 3px;
-}
-
-.socialLine a:hover,
-.socialLine a:focus-visible {
-  color: var(--color-accent);
-}
-
-.placeholder {
-  color: var(--color-ink-muted);
-  text-decoration: underline dashed;
-  text-underline-offset: 3px;
-}
-
 .portrait {
   aspect-ratio: 4 / 5;
   display: flex;

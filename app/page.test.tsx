@@ -16,30 +16,13 @@ describe("HomePage", () => {
     expect(screen.getByText(siteConfig.location)).toBeInTheDocument();
   });
 
-  it("renders a link for every real social entry in siteConfig", () => {
+  it("links to the Notebook from the explore line", () => {
     render(<HomePage />);
 
-    for (const link of siteConfig.social) {
-      if (link.isPlaceholder) continue;
-      expect(screen.getByRole("link", { name: link.label })).toHaveAttribute(
-        "href",
-        link.href
-      );
-    }
-  });
-
-  it("renders placeholder social entries as non-interactive text, not dead links", () => {
-    render(<HomePage />);
-
-    const placeholders = siteConfig.social.filter((link) => link.isPlaceholder);
-    expect(placeholders.length).toBeGreaterThan(0);
-
-    for (const link of placeholders) {
-      expect(
-        screen.queryByRole("link", { name: link.label })
-      ).not.toBeInTheDocument();
-      expect(screen.getByText(link.label)).toBeInTheDocument();
-    }
+    expect(screen.getByRole("link", { name: "Notebook" })).toHaveAttribute(
+      "href",
+      "/notebook"
+    );
   });
 
   it("renders every education entry with its logo and blurb", () => {

@@ -60,25 +60,6 @@ export default function HomePage() {
 
               <ResumeSection title="Education" entries={education} />
               <ResumeSection title="Experience" entries={experience} />
-
-              <ul className={styles.socialLine}>
-                {siteConfig.social.map((link) =>
-                  link.isPlaceholder ? (
-                    <li key={link.label}>
-                      <span
-                        className={styles.placeholder}
-                        title="TODO: add real link"
-                      >
-                        {link.label}
-                      </span>
-                    </li>
-                  ) : (
-                    <li key={link.label}>
-                      <a href={link.href}>{link.label}</a>
-                    </li>
-                  )
-                )}
-              </ul>
             </div>
             <div>
               <div className={styles.portrait}>
@@ -97,8 +78,7 @@ export default function HomePage() {
         </div>
       </div>
       <p className={styles.explore}>
-        Start with the <Link href="/notebook">Notebook</Link>, or see what
-        I&apos;ve been into over in <Link href="/learnings">Learnings</Link>.
+        Check out my <Link href="/notebook">Notebook</Link>.
       </p>
     </>
   );
