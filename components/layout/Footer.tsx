@@ -15,6 +15,13 @@ const iconByLabel: Record<string, ComponentType<{ className?: string }>> = {
   Resume: GoogleDocsIcon,
 };
 
+// The Google Docs mark has more internal negative space (three cutout text
+// lines) than the other solid brand silhouettes, so it reads visually
+// lighter at the same nominal size — render it slightly larger to balance.
+const iconClassByLabel: Record<string, string | undefined> = {
+  Resume: "iconLarge",
+};
+
 export function Footer() {
   const year = new Date().getFullYear();
 
@@ -26,6 +33,10 @@ export function Footer() {
       <ul className={styles.social}>
         {siteConfig.social.map((link) => {
           const Icon = iconByLabel[link.label];
+          const iconClassKey = iconClassByLabel[link.label];
+          const iconClassName = iconClassKey
+            ? `${styles.icon} ${styles[iconClassKey]}`
+            : styles.icon;
           return (
             <li key={link.label}>
               {link.isPlaceholder ? (
@@ -34,11 +45,11 @@ export function Footer() {
                   title="TODO: add real link"
                   aria-label={`${link.label} (coming soon)`}
                 >
-                  {Icon ? <Icon className={styles.icon} /> : link.label}
+                  {Icon ? <Icon className={iconClassName} /> : link.label}
                 </span>
               ) : (
                 <a href={link.href} aria-label={link.label}>
-                  {Icon ? <Icon className={styles.icon} /> : link.label}
+                  {Icon ? <Icon className={iconClassName} /> : link.label}
                 </a>
               )}
             </li>

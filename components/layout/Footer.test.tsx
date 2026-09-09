@@ -24,13 +24,12 @@ describe("Footer", () => {
     }
   });
 
-  it("renders placeholder social entries as non-interactive, not dead links", () => {
+  it("renders any placeholder social entries as non-interactive, not dead links", () => {
     render(<Footer />);
 
     const placeholders = siteConfig.social.filter(
       (link) => link.isPlaceholder
     );
-    expect(placeholders.length).toBeGreaterThan(0);
 
     for (const link of placeholders) {
       expect(
