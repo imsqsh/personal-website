@@ -38,6 +38,16 @@ function ResumeSection({
                 </span>
               </div>
               <p className={styles.resumeBlurb}>{entry.blurb}</p>
+              {entry.link ? (
+                <a
+                  href={entry.link.href}
+                  className={styles.resumeLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {entry.link.label}
+                </a>
+              ) : null}
             </div>
           </li>
         ))}

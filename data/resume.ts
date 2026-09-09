@@ -4,6 +4,7 @@ export type ResumeEntry = {
   role: string;
   dates: string;
   blurb: string;
+  link?: { label: string; href: string };
 };
 
 // Brief snippets condensed from docs/reference/resume-source.md — not the
@@ -22,8 +23,11 @@ export const education: ResumeEntry[] = [
     logo: "/images/logos/asu.svg",
     role: "B.S. Computer Science, Minors in Mathematics and Business",
     dates: "2022 – 2026",
-    blurb:
-      "Barrett, the Honors College | GPA 3.88 \n Honors Thesis: Designing Accessible Interactive Software for Space Science Exhibits: Enhancing Inclusivity in the NASA Psyche Mission Display",
+    blurb: "Barrett, the Honors College | GPA 3.88",
+    link: {
+      label: "Honors Thesis: NASA Psyche Mission",
+      href: "https://keep.lib.asu.edu/items/204262",
+    },
   },
 ];
 

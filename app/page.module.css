@@ -105,6 +105,20 @@
   white-space: pre-line;
 }
 
+.resumeLink {
+  display: block;
+  margin-top: var(--space-1);
+  color: var(--color-ink-muted);
+  font-size: var(--step--1);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.resumeLink:hover,
+.resumeLink:focus-visible {
+  color: var(--color-accent);
+}
+
 .portrait {
   aspect-ratio: 4 / 5;
   display: flex;

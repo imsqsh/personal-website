@@ -40,6 +40,12 @@ describe("HomePage", () => {
       expect(
         screen.getByAltText(`${entry.organization} logo`)
       ).toBeInTheDocument();
+      if (entry.link) {
+        const link = screen.getByRole("link", { name: entry.link.label });
+        expect(link).toHaveAttribute("href", entry.link.href);
+        expect(link).toHaveAttribute("target", "_blank");
+        expect(link).toHaveAttribute("rel", "noopener noreferrer");
+      }
     }
   });
 
