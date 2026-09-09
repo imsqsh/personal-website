@@ -48,7 +48,12 @@ export function Footer() {
                   {Icon ? <Icon className={iconClassName} /> : link.label}
                 </span>
               ) : (
-                <a href={link.href} aria-label={link.label}>
+                <a
+                  href={link.href}
+                  aria-label={link.label}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   {Icon ? <Icon className={iconClassName} /> : link.label}
                 </a>
               )}

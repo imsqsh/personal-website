@@ -24,6 +24,17 @@ describe("Footer", () => {
     }
   });
 
+  it("opens every real social link in a new tab safely", () => {
+    render(<Footer />);
+
+    for (const link of siteConfig.social) {
+      if (link.isPlaceholder) continue;
+      const anchor = screen.getByRole("link", { name: link.label });
+      expect(anchor).toHaveAttribute("target", "_blank");
+      expect(anchor).toHaveAttribute("rel", "noopener noreferrer");
+    }
+  });
+
   it("renders any placeholder social entries as non-interactive, not dead links", () => {
     render(<Footer />);
 
