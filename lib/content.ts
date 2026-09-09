@@ -14,7 +14,10 @@ export type MDXEntry<TFrontmatter> = {
 type MDXComponents = Record<string, ComponentType<any>>;
 
 export async function listMDXSlugs(dir: string): Promise<string[]> {
-  const files = await readdir(dir);
+  const files = await readdir(dir).catch((err) => {
+    if ((err as NodeJS.ErrnoException).code === "ENOENT") return [];
+    throw err;
+  });
   return files
     .filter((file) => file.endsWith(".mdx"))
     .map((file) => file.replace(/\.mdx$/, ""))

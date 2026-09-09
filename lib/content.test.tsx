@@ -2,8 +2,14 @@ import { afterEach, describe, expect, it } from "vitest";
 import { mkdtemp, rm, writeFile } from "node:fs/promises";
 import { tmpdir } from "node:os";
 import path from "node:path";
+import type { ReactNode } from "react";
+import { render, screen } from "@testing-library/react";
 import { z } from "zod";
 import { listMDXSlugs, loadMDXCollection, loadMDXEntry } from "./content";
+
+function Highlight({ children }: { children: ReactNode }) {
+  return <strong>{children}</strong>;
+}
 
 const frontmatterSchema = z.object({
   title: z.string(),
@@ -36,6 +42,14 @@ describe("content loader", () => {
     expect(slugs).toEqual(["first-post", "second-post"]);
   });
 
+  it("resolves to an empty array when the collection directory does not exist", async () => {
+    const missingDir = path.join(tmpdir(), "content-test-does-not-exist");
+
+    const slugs = await listMDXSlugs(missingDir);
+
+    expect(slugs).toEqual([]);
+  });
+
   it("loads and validates a single entry's frontmatter", async () => {
     dir = await mkdtemp(path.join(tmpdir(), "content-test-"));
     await writeFile(
@@ -50,7 +64,24 @@ describe("content loader", () => {
       title: "Hello World",
       summary: "A test entry",
     });
-    expect(entry.content).toBeDefined();
+    render(entry.content);
+    expect(screen.getByText("Body content.")).toBeInTheDocument();
+  });
+
+  it("renders custom components passed to loadMDXEntry", async () => {
+    dir = await mkdtemp(path.join(tmpdir(), "content-test-"));
+    await writeFile(
+      path.join(dir, "with-component.mdx"),
+      "---\ntitle: Has Component\nsummary: A test entry\n---\n\n<Highlight>Important text.</Highlight>"
+    );
+
+    const entry = await loadMDXEntry(dir, "with-component", frontmatterSchema, {
+      Highlight,
+    });
+
+    render(entry.content);
+    const highlighted = screen.getByText("Important text.");
+    expect(highlighted.tagName).toBe("STRONG");
   });
 
   it("throws a descriptive error when frontmatter fails schema validation", async () => {
