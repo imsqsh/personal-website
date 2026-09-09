@@ -71,6 +71,12 @@
   color: var(--color-accent);
 }
 
+.placeholder {
+  color: var(--color-ink-muted);
+  text-decoration: underline dashed;
+  text-underline-offset: 3px;
+}
+
 .portrait {
   aspect-ratio: 4 / 5;
   display: flex;
