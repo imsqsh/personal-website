@@ -21,10 +21,10 @@ export type SiteConfig = {
 
 export const siteConfig: SiteConfig = {
   name: "Yash Mulimani",
-  tagline: "TODO: Add current one-line personal tagline",
+  tagline: "Learning how to learn again",
   intro:
-    "TODO: Add a short personal introduction — who you are, what you build, what you're curious about.",
-  location: "TODO: Add current location/context",
+    "Hey! I'm Yash, a MSE CIS student at the University of Pennsylvania and a former Honors CS, Math, and Business student at Arizona State University.",
+  location: "Philadelphia, Pennsylvania",
   nav: [
     { label: "Projects", href: "/projects" },
     { label: "Technical", href: "/technical" },
