@@ -6,10 +6,7 @@ export default function ProjectsPage() {
   return (
     <>
       <h1>Projects</h1>
-      <p>
-        TODO: Replace with the real projects index — see
-        docs/superpowers/specs/2026-09-08-personal-website-design.md.
-      </p>
+      <p>TODO: Replace with the real projects index.</p>
     </>
   );
 }
