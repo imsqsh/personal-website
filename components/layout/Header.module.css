@@ -1,7 +1,6 @@
 .header {
   display: flex;
   align-items: baseline;
-  justify-content: space-between;
   gap: var(--space-4);
   max-width: var(--page-max-width);
   margin: 0 auto;

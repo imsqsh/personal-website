@@ -1,4 +1,5 @@
 .nav {
+  margin-left: auto;
   font-family: var(--font-family-mono);
   font-size: var(--step--1);
 }
