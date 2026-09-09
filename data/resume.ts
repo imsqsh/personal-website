@@ -34,7 +34,7 @@ export const experience: ResumeEntry[] = [
     role: "Software Development Engineering Intern",
     dates: "Summer 2026",
     blurb:
-      "Built an agentic form-autofill feature for AWS Partner Central using a multi-agent LLM pipeline, cutting completion time by 82%.",
+      "Built an agentic form-autofill feature for AWS Partner Central using a multi-agent LLM pipeline.",
   },
   {
     organization: "Garmin",
@@ -42,7 +42,7 @@ export const experience: ResumeEntry[] = [
     role: "Software Engineering Intern",
     dates: "Summer 2025",
     blurb:
-      "Built low-latency communication protocols in Go and C for avionics telemetry and cabin display systems.",
+      "Built low-latency communication protocols in C for avionics telemetry and cabin display systems.",
   },
   {
     organization: "Interplanetary Initiative",
@@ -50,7 +50,7 @@ export const experience: ResumeEntry[] = [
     role: "Embedded Systems Software Developer",
     dates: "2023 – 2025",
     blurb:
-      "Developed C/C++ CubeSat communication drivers and telemetry pipelines for a joint NASA JPL–ASU mission.",
+      "Developed C/C++ CubeSat communication drivers and telemetry pipelines for a NASA JPL–ASU mission.",
   },
   {
     organization: "Citizens",
