@@ -13,6 +13,8 @@ export type SocialLink = {
 export type SiteConfig = {
   name: string;
   tagline: string;
+  intro: string;
+  location: string;
   nav: NavItem[];
   social: SocialLink[];
 };
@@ -20,6 +22,9 @@ export type SiteConfig = {
 export const siteConfig: SiteConfig = {
   name: "Yash Mulimani",
   tagline: "TODO: Add current one-line personal tagline",
+  intro:
+    "TODO: Add a short personal introduction — who you are, what you build, what you're curious about.",
+  location: "TODO: Add current location/context",
   nav: [
     { label: "Projects", href: "/projects" },
     { label: "Technical", href: "/technical" },
