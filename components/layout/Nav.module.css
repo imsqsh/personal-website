@@ -19,5 +19,5 @@
 
 .link:hover,
 .link:focus-visible {
-  color: var(--color-accent);
+  color: var(--color-ink);
 }

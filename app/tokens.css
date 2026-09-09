@@ -27,8 +27,8 @@
   --color-ink: #1c1a16;
   --color-ink-muted: #55524a;
   --color-rule: #ddd6c6;
-  --color-accent: #8c1d40;
-  --color-accent-secondary: #967bb6;
+  --color-accent: #a4402a;
+  --color-accent-hover: color-mix(in srgb, var(--color-accent) 82%, black);
   --color-accent-ink: #ffffff;
 
   --content-max-width: 42rem;
@@ -43,8 +43,8 @@
     --color-ink: #f2ede1;
     --color-ink-muted: #b4ac9a;
     --color-rule: #3a352a;
-    --color-accent: #dc5680;
-    --color-accent-secondary: #977cb6;
+    --color-accent: #e2734f;
+    --color-accent-hover: color-mix(in srgb, var(--color-accent) 82%, white);
     --color-accent-ink: #17150f;
   }
 }

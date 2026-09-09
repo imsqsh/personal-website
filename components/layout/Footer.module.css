@@ -34,7 +34,7 @@
 
 .social a:hover,
 .social a:focus-visible {
-  color: var(--color-accent);
+  color: var(--color-ink);
 }
 
 .icon {

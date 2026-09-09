@@ -158,3 +158,8 @@
   text-decoration: underline;
   text-underline-offset: 3px;
 }
+
+.explore a:hover,
+.explore a:focus-visible {
+  color: var(--color-accent-hover);
+}
