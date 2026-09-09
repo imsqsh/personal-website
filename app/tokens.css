@@ -22,12 +22,13 @@
   --space-7: 3rem;
   --space-8: 4.5rem;
 
-  --color-bg: #faf7f0;
+  --color-bg: #faf9f5;
   --color-bg-raised: #f2ede1;
   --color-ink: #1c1a16;
   --color-ink-muted: #55524a;
   --color-rule: #ddd6c6;
-  --color-accent: #a4402a;
+  --color-accent: #8c1d40;
+  --color-accent-secondary: #967bb6;
   --color-accent-ink: #ffffff;
 
   --content-max-width: 42rem;
@@ -42,7 +43,8 @@
     --color-ink: #f2ede1;
     --color-ink-muted: #b4ac9a;
     --color-rule: #3a352a;
-    --color-accent: #e2734f;
+    --color-accent: #dc5680;
+    --color-accent-secondary: #977cb6;
     --color-accent-ink: #17150f;
   }
 }
