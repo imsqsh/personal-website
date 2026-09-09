@@ -15,7 +15,7 @@ export const education: ResumeEntry[] = [
     logo: "/images/logos/upenn.svg",
     role: "M.S.E., Computer and Information Science",
     dates: "2026 – 2028",
-    blurb: "Graduate study in computer and information science. GPA 4.0.",
+    blurb: "GPA: 4.0",
   },
   {
     organization: "Arizona State University",
@@ -23,7 +23,7 @@ export const education: ResumeEntry[] = [
     role: "B.S. Computer Science, Minors in Mathematics and Business",
     dates: "2022 – 2026",
     blurb:
-      "Barrett Honors College. GPA 3.88. Coursework spanning AI/ML, NLP, cybersecurity, cryptography, and systems.",
+      "Barrett, the Honors College | GPA 3.88 \n Honors Thesis: Designing Accessible Interactive Software for Space Science Exhibits: Enhancing Inclusivity in the NASA Psyche Mission Display",
   },
 ];
 
