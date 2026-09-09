@@ -31,7 +31,7 @@ export const siteConfig: SiteConfig = {
   ],
   social: [
     { label: "GitHub", href: "https://github.com/imsqsh" },
-    { label: "Email", href: "mailto:yash.mulimani@gmail.com" },
-    { label: "LinkedIn", href: "#", isPlaceholder: true },
+    { label: "Email", href: "mailto:mulimani@engineering.upenn.edu" },
+    { label: "LinkedIn", href: "https://www.linkedin.com/in/yashmulimani/"},
   ],
 };
