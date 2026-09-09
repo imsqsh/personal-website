@@ -34,7 +34,9 @@ describe("HomePage", () => {
 
     for (const entry of education) {
       expect(screen.getByText(entry.organization)).toBeInTheDocument();
-      expect(screen.getByText(entry.blurb)).toBeInTheDocument();
+      expect(
+        screen.getByText(entry.blurb, { normalizer: (text) => text })
+      ).toBeInTheDocument();
       expect(
         screen.getByAltText(`${entry.organization} logo`)
       ).toBeInTheDocument();

@@ -83,9 +83,9 @@
 
 .resumeEntryHeader {
   display: flex;
-  flex-wrap: wrap;
-  align-items: baseline;
-  gap: var(--space-1) var(--space-3);
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--space-1);
 }
 
 .resumeOrg {
@@ -102,6 +102,7 @@
   margin: var(--space-1) 0 0;
   color: var(--color-ink-muted);
   font-size: var(--step--1);
+  white-space: pre-line;
 }
 
 .portrait {
@@ -150,7 +151,7 @@
   padding-top: var(--space-6);
   border-top: 1px solid var(--color-rule);
   font-family: var(--font-family-serif);
-  font-size: var(--step-1);
+  font-size: calc(var(--step-1) * 1.25);
   text-align: center;
 }
 
