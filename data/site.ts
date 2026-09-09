@@ -26,13 +26,9 @@ export const siteConfig: SiteConfig = {
     "Hey! I'm Yash, a MSE CIS student at the University of Pennsylvania and a former Honors CS, Math, and Business student at Arizona State University.",
   location: "Philadelphia, Pennsylvania",
   nav: [
-    { label: "Projects", href: "/projects" },
     { label: "Technical", href: "/technical" },
-    { label: "Education", href: "/education" },
-    { label: "Experience", href: "/experience" },
-    { label: "Hobbies", href: "/hobbies" },
-    { label: "Writing", href: "/writing" },
-    { label: "Now", href: "/now" },
+    { label: "Learnings", href: "/learnings" },
+    { label: "Notebook", href: "/notebook" },
   ],
   social: [
     { label: "GitHub", href: "https://github.com/imsqsh" },

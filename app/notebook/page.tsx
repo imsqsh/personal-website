@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
 
-export const metadata: Metadata = { title: "Writing" };
+export const metadata: Metadata = { title: "Notebook" };
 
-export default function WritingPage() {
+export default function NotebookPage() {
   return (
     <>
-      <h1>Writing</h1>
+      <h1>Notebook</h1>
       <p>Nothing published yet — check back soon.</p>
     </>
   );
