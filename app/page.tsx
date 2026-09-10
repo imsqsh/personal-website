@@ -12,17 +12,13 @@ const currentlyItems: { label: string; text: string; href?: string }[] = [
     text: "Dawn - Pride & Prejudice (Piano)",
     href: "https://www.youtube.com/watch?v=I5IYNt9UKTQ&list=RDI5IYNt9UKTQ",
   },
-  { label: "Reading", text: "Wuthering Heights (Emily Bronte)" },
+  { label: "Reading", text: "Wuthering Heights (Emily Brontë)" },
   {
     label: "Listening",
     text: "Rhapsody in Blue (George Gershwin)",
     href: "https://www.youtube.com/watch?v=0U-IXWaapx4&list=RD0U-IXWaapx4",
   },
-  {
-    label: "Eating",
-    text: "Kalaya (Philadelphia, PA)",
-    href: "https://beli.co/app/imsqsh",
-  },
+  { label: "Eating", text: "Kalaya (Philadelphia, PA)" },
 ];
 
 function ResumeSection({
