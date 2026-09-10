@@ -73,7 +73,14 @@ export default function HomePage() {
             </div>
             <div>
               <div className={styles.portrait}>
-                TODO: add portrait — public/images/profile/portrait.jpg
+                <Image
+                  src="/images/profile/portrait.png"
+                  alt="Yash Mulimani"
+                  width={1082}
+                  height={1514}
+                  className={styles.portraitImage}
+                  priority
+                />
               </div>
               <div className={styles.currently}>
                 <p className={styles.currentlyTitle}>Currently</p>
