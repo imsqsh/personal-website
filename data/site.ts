@@ -25,14 +25,11 @@ export const siteConfig: SiteConfig = {
   intro:
     "Hey! I'm Yash, a MSE CIS student at the University of Pennsylvania and a former Honors CS, Math, and Business student at Arizona State University.",
   location: "Philadelphia, Pennsylvania",
-  nav: [
-    { label: "Notebook", href: "/notebook" },
-    { label: "Random", href: "/random" },
-  ],
+  nav: [{ label: "Notebook", href: "/notebook" }],
   social: [
     { label: "GitHub", href: "https://github.com/imsqsh" },
     { label: "Email", href: "mailto:mulimani@engineering.upenn.edu" },
     { label: "LinkedIn", href: "https://www.linkedin.com/in/yashmulimani/" },
-    { label: "Resume", href: "https://drive.google.com/file/d/1vHE96Li9kJ6L9X_Qdn1o-Wfj5HBBJ7tC/view?usp=sharing" },
+    { label: "Resume", href: "https://drive.google.com/file/d/1hngEggBulLS8HXIEbvJB7QIBd2ieGQrW/view?usp=sharing" },
   ],
 };
