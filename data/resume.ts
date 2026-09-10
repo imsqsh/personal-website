@@ -34,7 +34,7 @@ export const education: ResumeEntry[] = [
 export const experience: ResumeEntry[] = [
   {
     organization: "Amazon Web Services",
-    logo: "/images/logos/aws.svg",
+    logo: "/images/logos/aws.jpeg",
     role: "Software Development Engineering Intern",
     dates: "Summer 2026",
     blurb:
@@ -42,7 +42,7 @@ export const experience: ResumeEntry[] = [
   },
   {
     organization: "Garmin",
-    logo: "/images/logos/garmin.svg",
+    logo: "/images/logos/garmin.jpeg",
     role: "Software Engineering Intern",
     dates: "Summer 2025",
     blurb:
@@ -50,7 +50,7 @@ export const experience: ResumeEntry[] = [
   },
   {
     organization: "Interplanetary Initiative",
-    logo: "/images/logos/asu.svg",
+    logo: "/images/logos/interplanetary.jpeg",
     role: "Embedded Systems Software Developer",
     dates: "2023 – 2025",
     blurb:
@@ -58,7 +58,7 @@ export const experience: ResumeEntry[] = [
   },
   {
     organization: "Citizens",
-    logo: "/images/logos/citizens.svg",
+    logo: "/images/logos/citizens.jpeg",
     role: "Software Engineering Intern",
     dates: "Summer 2024",
     blurb:
