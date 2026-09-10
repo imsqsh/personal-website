@@ -4,26 +4,28 @@ import NotebookPage from "./page";
 import { notebookArticles } from "@/data/notebook";
 
 describe("NotebookPage", () => {
-  it("renders untagged articles as a general list", () => {
+  it("renders every article as a single flat list", () => {
     render(<NotebookPage />);
 
     expect(
       screen.getByRole("heading", { level: 1, name: "Notebook" })
     ).toBeInTheDocument();
 
-    const general = notebookArticles.filter((a) => a.tags.length === 0);
-    const placeholders = screen.getAllByText("TODO: post title");
-    expect(placeholders).toHaveLength(general.length);
+    const untagged = notebookArticles.filter((a) => a.tags.length === 0);
+    expect(screen.getAllByText("TODO: post title")).toHaveLength(
+      untagged.length
+    );
+
+    expect(screen.queryAllByRole("heading", { level: 2 })).toHaveLength(0);
   });
 
-  it("groups tagged articles under a heading per distinct tag", () => {
+  it("shows each article's tags next to its title", () => {
     render(<NotebookPage />);
 
-    const tags = new Set(notebookArticles.flatMap((a) => a.tags));
-    for (const tag of tags) {
-      expect(
-        screen.getByRole("heading", { level: 2, name: tag })
-      ).toBeInTheDocument();
+    for (const article of notebookArticles) {
+      for (const tag of article.tags) {
+        expect(screen.getByText(tag)).toBeInTheDocument();
+      }
     }
   });
 

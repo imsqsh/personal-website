@@ -2,6 +2,8 @@ import { describe, expect, it } from "vitest";
 import { render, screen } from "@testing-library/react";
 import TopFiveSportsMomentsPage from "./page";
 import { sportsMoments } from "@/data/sportsMoments";
+import { topFiveSportsMoments } from "@/data/notebook";
+import { formatDate } from "@/lib/formatDate";
 
 describe("TopFiveSportsMomentsPage", () => {
   it("renders a numbered heading and a video for each moment", () => {
@@ -17,5 +19,15 @@ describe("TopFiveSportsMomentsPage", () => {
     for (const moment of sportsMoments) {
       expect(screen.getByLabelText(moment.title)).toBeInTheDocument();
     }
+  });
+
+  it("shows the article's tag and published date in the byline", () => {
+    render(<TopFiveSportsMomentsPage />);
+
+    expect(
+      screen.getByText(
+        `Sports · Published ${formatDate(topFiveSportsMoments.date!)}`
+      )
+    ).toBeInTheDocument();
   });
 });

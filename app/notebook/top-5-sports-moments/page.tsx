@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { sportsMoments } from "@/data/sportsMoments";
+import { topFiveSportsMoments } from "@/data/notebook";
 import { ClipPlayer } from "@/components/media/ClipPlayer";
+import { formatDate } from "@/lib/formatDate";
 import styles from "./page.module.css";
 
 export const metadata: Metadata = { title: "Top 5 Sports Moments" };
@@ -14,6 +16,12 @@ export default function TopFiveSportsMomentsPage() {
           ← Notebook
         </Link>
         <h1 className={styles.title}>Top 5 Sports Moments</h1>
+        <p className={styles.byline}>
+          {topFiveSportsMoments.tags.join(", ")}
+          {topFiveSportsMoments.date
+            ? ` · Published ${formatDate(topFiveSportsMoments.date)}`
+            : null}
+        </p>
         <p className={styles.intro}>
           TODO: a couple of sentences on what this list is and why these five.
         </p>
