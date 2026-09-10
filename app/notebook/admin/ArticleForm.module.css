@@ -1,0 +1,113 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  max-width: 34rem;
+  margin-top: var(--space-6);
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.label {
+  font-family: var(--font-family-mono);
+  font-size: var(--step--1);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--color-ink-muted);
+}
+
+.input,
+.textarea {
+  padding: var(--space-2) var(--space-3);
+  font-family: var(--font-family-sans);
+  font-size: var(--step-0);
+  border: 1px solid var(--color-rule);
+  background: var(--color-bg-raised);
+  color: var(--color-ink);
+}
+
+.textarea {
+  resize: vertical;
+  font-family: var(--font-family-mono);
+  font-size: var(--step--1);
+  line-height: 1.5;
+}
+
+.hint {
+  margin: 0;
+  font-family: var(--font-family-mono);
+  font-size: var(--step--1);
+  color: var(--color-ink-muted);
+}
+
+.hint code {
+  color: var(--color-ink);
+}
+
+.note {
+  padding: var(--space-3) var(--space-4);
+  border: 1px solid var(--color-rule);
+  background: var(--color-bg-raised);
+  font-size: var(--step--1);
+  color: var(--color-ink-muted);
+}
+
+.note code {
+  color: var(--color-ink);
+}
+
+.error {
+  color: var(--color-accent);
+  font-size: var(--step--1);
+}
+
+.actions {
+  display: flex;
+  gap: var(--space-3);
+}
+
+.primaryButton {
+  padding: var(--space-2) var(--space-4);
+  border: 1px solid var(--color-ink);
+  background: var(--color-ink);
+  color: var(--color-bg);
+  font-family: var(--font-family-mono);
+  font-size: var(--step--1);
+  cursor: pointer;
+}
+
+.primaryButton:hover,
+.primaryButton:focus-visible {
+  background: var(--color-accent);
+  border-color: var(--color-accent);
+}
+
+.primaryButton:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.secondaryButton {
+  padding: var(--space-2) var(--space-4);
+  border: 1px solid var(--color-rule);
+  background: transparent;
+  color: var(--color-ink);
+  font-family: var(--font-family-mono);
+  font-size: var(--step--1);
+  cursor: pointer;
+}
+
+.secondaryButton:hover,
+.secondaryButton:focus-visible {
+  border-color: var(--color-accent);
+  color: var(--color-accent);
+}
+
+.secondaryButton:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}

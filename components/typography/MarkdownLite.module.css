@@ -1,0 +1,12 @@
+.paragraph {
+  margin: 0 0 var(--space-5);
+  max-width: 38rem;
+}
+
+.image {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: var(--space-6) 0;
+  border: 1px solid var(--color-rule);
+}

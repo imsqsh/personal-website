@@ -1,34 +1,48 @@
 # Writing a new Notebook article
 
+There are two ways to publish an article:
+
+- **`/notebook/admin`** — a web form for straightforward text/quote/image
+  articles. No code, no git. Use this unless you need something the form
+  can't do.
+- **This template** — for an article with something the admin form
+  doesn't support (video embeds, custom layout, anything interactive).
+  Requires editing code and committing/pushing normally.
+
 This folder is a template, not a real page — the leading underscore
 (`_template`) tells Next.js to exclude it from routing, so it's safe to
 leave in the repo without it becoming a live URL.
 
-## Steps
+## Steps (hand-coded article)
 
 1. **Copy the folder.** Duplicate `app/notebook/_template/` to
    `app/notebook/<your-slug>/` (e.g. `app/notebook/learning-piano/`).
    The folder name becomes the URL: `/notebook/<your-slug>`.
 
-2. **Register the article** in `data/notebook.ts`:
+2. **Register the article** in `data/notebookArticles.json`:
 
-   ```ts
-   export const yourArticle: NotebookArticle = {
-     title: "Your Article Title",
-     tags: ["Music"], // shown as pills next to the title on /notebook; [] for a general note
-     href: "/notebook/your-slug",
-     date: "2026-01-01", // set this when you actually publish
-   };
+   ```json
+   {
+     "slug": "your-slug",
+     "title": "Your Article Title",
+     "tags": ["Music"],
+     "href": "/notebook/your-slug",
+     "date": "2026-01-01"
+   }
    ```
 
-   Add `yourArticle` to the `notebookArticles` array so it shows up on
-   the Notebook page.
+   `tags` is shown as pills next to the title on `/notebook` — use `[]`
+   for a general note. `href` is what makes this a hand-coded page
+   instead of one rendered by the generic `/notebook/[slug]` route (that
+   route only renders articles that have a `body` field instead of
+   `href`, which is how `/notebook/admin` publishes articles).
 
 3. **Write the page** in `page.tsx`. Import the entry you just added
-   (`import { yourArticle } from "@/data/notebook"`) instead of the
-   inline placeholder object the template uses, so the byline always
-   matches what's on the Notebook listing. Update `metadata.title` and
-   the `<h1>` to match.
+   (`import { notebookArticles } from "@/data/notebook"` and find it by
+   slug, or add a named export in `data/notebook.ts` the way
+   `topFiveSportsMoments` does) instead of the inline placeholder object
+   the template uses, so the byline always matches what's on the
+   Notebook listing. Update `metadata.title` and the `<h1>` to match.
 
 4. **Embedding things** — the template demonstrates each of these
    inline:
@@ -50,4 +64,4 @@ leave in the repo without it becoming a live URL.
    it's not linked from anywhere) once the real article is written.
 
 6. **Run the checks** before committing: `npm run build`, `npx tsc
-   --noEmit`, `npm test`.
+   --noEmit`, `npm test`, `npx eslint .`.

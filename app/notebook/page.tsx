@@ -6,11 +6,8 @@ import styles from "./page.module.css";
 export const metadata: Metadata = { title: "Notebook" };
 
 function ArticleTitle({ article }: { article: NotebookArticle }) {
-  return article.href ? (
-    <Link href={article.href}>{article.title}</Link>
-  ) : (
-    <>{article.title}</>
-  );
+  const href = article.href ?? (article.body ? `/notebook/${article.slug}` : undefined);
+  return href ? <Link href={href}>{article.title}</Link> : <>{article.title}</>;
 }
 
 export default function NotebookPage() {
