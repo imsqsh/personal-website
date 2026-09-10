@@ -25,6 +25,9 @@ window.matchMedia =
 // reaching the DOM — drop them here too instead of forwarding to <img>.
 vi.mock("next/image", () => ({
   __esModule: true,
+  // Leading underscores mark these as intentionally unused (see the
+  // no-unused-vars override in eslint.config.mjs) — destructured only to
+  // exclude them from the DOM props spread below.
   default: ({
     fill: _fill,
     priority: _priority,
