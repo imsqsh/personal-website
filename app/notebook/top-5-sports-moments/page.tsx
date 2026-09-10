@@ -23,7 +23,7 @@ export default function TopFiveSportsMomentsPage() {
             : null}
         </p>
         <p className={styles.intro}>
-          TODO: a couple of sentences on what this list is and why these five.
+          I've been a fanatic of sports since before I can remember, growing up playing soccer, flag football, swimming, squash, tennis, and so much more. These are the 5 moments that mean the most to me.
         </p>
         <ol className={styles.list}>
           {sportsMoments.map((moment) => (
