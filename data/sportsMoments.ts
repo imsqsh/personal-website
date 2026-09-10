@@ -35,16 +35,16 @@ export const sportsMoments: SportsMoment[] = [
   },
   {
     rank: 4,
+    title: "LeBron James's block on Andre Iguodala — \"The Block\"",
+    context: "2016 NBA Finals, Game 7 — Cavaliers vs. Warriors",
+    description: "TODO: why this moment makes the list",
+    video: "/videos/sports/lebron-the-block.mp4",
+  },
+  {
+    rank: 5,
     title: "Luis Gonzalez's 2001 World Series walk-off",
     context: "2001 World Series, Game 7 — Diamondbacks vs. Yankees",
     description: "TODO: why this moment makes the list",
     video: "/videos/sports/gonzalez-2001-world-series-walkoff.mp4",
-  },
-  {
-    rank: 5,
-    title: "The Minneapolis Miracle",
-    context: "NFL Divisional Playoffs — Vikings vs. Saints",
-    description: "TODO: why this moment makes the list",
-    video: "/videos/sports/minneapolis-miracle.mp4",
   },
 ];
