@@ -1,6 +1,7 @@
 import type { ReactNode } from "react";
 import { Header } from "./Header";
 import { Footer } from "./Footer";
+import { PageTransition } from "./PageTransition";
 import styles from "./PageShell.module.css";
 
 export function PageShell({ children }: { children: ReactNode }) {
@@ -11,7 +12,7 @@ export function PageShell({ children }: { children: ReactNode }) {
       </a>
       <Header />
       <main id="main-content" className={styles.main}>
-        {children}
+        <PageTransition>{children}</PageTransition>
       </main>
       <Footer />
     </div>
