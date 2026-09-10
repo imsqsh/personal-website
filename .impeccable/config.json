@@ -1,0 +1,17 @@
+{
+  "detector": {
+    "ignoreRules": [],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {
+        "rule": "side-tab",
+        "value": "*",
+        "files": [
+          "components/typography/Quote.module.css"
+        ],
+        "createdAt": "2026-09-10T20:57:34.950Z",
+        "reason": "Left border on a semantic blockquote for pull-quotes, not a card/tile — classic editorial typographic convention, consistent with this site's established accent-rule design language (CLAUDE.md explicitly calls for rules as structural/typographic devices)."
+      }
+    ]
+  }
+}
