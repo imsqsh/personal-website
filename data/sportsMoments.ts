@@ -14,7 +14,7 @@ export const sportsMoments: SportsMoment[] = [
   {
     rank: 1,
     title: "Larry Fitzgerald Overtime Winner",
-    context: "NFL Divisional Playoffs — Cardinals vs. Packers (16 January 2016)",
+    context: "NFC Divisional Playoffs — Cardinals vs. Packers (16 January 2016)",
     description: "This is by far the single greatest moment I have ever seen and I can't even imagine where to begin with this. The Cardinals have never been a good franchise, let alone a mediocre one. They've always been at the bottom of the barrel in the league so being able to see a relevant season is an incredibly rare occasion. To even get to overtime, Aaron Rodgers had to make 2 ridiculous Hail Marys to Jeff Janis, a name that still strikes fear into my heart. For 11 year old me, this was too much to bear and I was in utter disbelief.\nYet the GOAT of Arizona sports, Larry Fitzgerald himself, decides to put the team on his back and take us to the promised land. Carson Palmer spins out of a sack, runs into his own offensive lineman, and somehow finds the best player between both teams completely unguarded. Fitzgerald gets into open space, turns on the jets, stiff arms, and gets twisted down at the 4 yard line. The entire state erupts. I go crazy, my dad goes wild, and the entire neighborhood starts screaming at 10pm.",
     video: "/videos/sports/fitzgerald-cardinals-nfc-championship.mp4",
   },
@@ -42,8 +42,8 @@ export const sportsMoments: SportsMoment[] = [
   {
     rank: 5,
     title: "2001 World Series Walk-Off",
-    context: "2001 World Series, Game 7 — Diamondbacks vs. Yankees (4 November 2001)",
-    description: "This is the only moment here that I was not alive for but given that it's Arizona's only championship of the 4 major American sports, it would be a disservice if I excluded it. Only a few years after their founding, the Diamondbacks find themselves in the World Series against the most storied franchise in baseball history. Led by their all-time great duo of pitchers Randy Johnson and Curt Schilling, the D-Backs dominate the Yankeese, but thanks to a couple of blown saves, they find themselves in a Game 7.\nRandy Johnson, after throwing over a 100 pitches the game before, manages to get Arizona through the top of the 9th. The bases get loadded and Luis Gonzalez floats one into center field to give Arizona it's first championship ever.",
+    context: "Game 7 — Diamondbacks vs. Yankees (4 November 2001)",
+    description: "This is the only moment here that I was not alive for but given that it's Arizona's only championship of the 4 major American sports, it would be a disservice if I excluded it. Only a few years after their founding, the Diamondbacks find themselves in the World Series against the most storied franchise in baseball history. Led by their all-time great duo of pitchers Randy Johnson and Curt Schilling, the D-Backs dominate the Yankeese, but thanks to a couple of blown saves, they find themselves in a Game 7.\nRandy Johnson, after throwing over a 100 pitches the game before, manages to get Arizona through the top of the 9th. The bases get loaded and Luis Gonzalez floats one into center field to give Arizona their first championship ever.",
     video: "/videos/sports/gonzalez-2001-world-series-walkoff.mp4",
   },
 ];
