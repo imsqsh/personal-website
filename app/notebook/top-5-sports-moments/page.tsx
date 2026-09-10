@@ -36,7 +36,11 @@ export default function TopFiveSportsMomentsPage() {
                 </div>
               </div>
               <ClipPlayer src={moment.video} title={moment.title} />
-              <p className={styles.momentDescription}>{moment.description}</p>
+              {moment.description.split("\n").map((paragraph, index) => (
+                <p key={index} className={styles.momentDescription}>
+                  {paragraph}
+                </p>
+              ))}
             </li>
           ))}
         </ol>
