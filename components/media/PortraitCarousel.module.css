@@ -1,0 +1,79 @@
+.frame {
+  position: relative;
+  padding: var(--space-3);
+  background: var(--color-bg-raised);
+  border: 1px solid var(--color-rule);
+}
+
+.corner {
+  position: absolute;
+  width: 1.1rem;
+  height: 1.1rem;
+  border: 0 solid var(--color-accent);
+  pointer-events: none;
+}
+
+.corner[data-pos="tl"] {
+  top: -0.4rem;
+  left: -0.4rem;
+  border-top-width: 2px;
+  border-left-width: 2px;
+}
+
+.corner[data-pos="tr"] {
+  top: -0.4rem;
+  right: -0.4rem;
+  border-top-width: 2px;
+  border-right-width: 2px;
+}
+
+.corner[data-pos="bl"] {
+  bottom: -0.4rem;
+  left: -0.4rem;
+  border-bottom-width: 2px;
+  border-left-width: 2px;
+}
+
+.corner[data-pos="br"] {
+  bottom: -0.4rem;
+  right: -0.4rem;
+  border-bottom-width: 2px;
+  border-right-width: 2px;
+}
+
+.stack {
+  position: relative;
+  aspect-ratio: 4 / 5;
+  overflow: hidden;
+  border: 1px solid var(--color-ink);
+}
+
+.image {
+  object-fit: cover;
+  transition: opacity 0.6s ease;
+}
+
+.dots {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-2);
+  margin-top: var(--space-3);
+}
+
+.dot {
+  width: 0.5rem;
+  height: 0.5rem;
+  padding: 0;
+  border: 1px solid var(--color-ink-muted);
+  background: transparent;
+  cursor: pointer;
+}
+
+.dot[data-active="true"] {
+  background: var(--color-accent);
+  border-color: var(--color-accent);
+}
+
+.dot:hover {
+  border-color: var(--color-accent);
+}

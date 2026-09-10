@@ -2,12 +2,18 @@ import Image from "next/image";
 import Link from "next/link";
 import { siteConfig } from "@/data/site";
 import { education, experience, type ResumeEntry } from "@/data/resume";
+import { profilePhotos } from "@/data/profilePhotos";
+import { PortraitCarousel } from "@/components/media/PortraitCarousel";
 import styles from "./page.module.css";
 
-const currentlyItems = [
-  "Building: TODO — what you're currently building",
-  "Learning: TODO — what you're currently learning",
-  "Reading: TODO — what you're currently reading",
+const currentlyItems: { label: string; text: string; href?: string }[] = [
+  {
+    label: "Learning",
+    text: "Dawn - Pride & Prejudice (Piano)",
+    href: "https://www.youtube.com/watch?v=I5IYNt9UKTQ&list=RDI5IYNt9UKTQ",
+  },
+  { label: "Reading", text: "Wuthering Heights (Emily Bronte)" },
+  { label: "Building", text: "AI Football Assistant" },
 ];
 
 function ResumeSection({
@@ -72,21 +78,26 @@ export default function HomePage() {
               <ResumeSection title="Experience" entries={experience} />
             </div>
             <div>
-              <div className={styles.portrait}>
-                <Image
-                  src="/images/profile/portrait.png"
-                  alt="Yash Mulimani"
-                  width={1082}
-                  height={1514}
-                  className={styles.portraitImage}
-                  priority
-                />
-              </div>
+              <PortraitCarousel images={profilePhotos} />
               <div className={styles.currently}>
                 <p className={styles.currentlyTitle}>Currently</p>
                 <ul className={styles.currentlyList}>
                   {currentlyItems.map((item) => (
-                    <li key={item}>{item}</li>
+                    <li key={item.label}>
+                      {item.label}:{" "}
+                      {item.href ? (
+                        <a
+                          href={item.href}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className={styles.currentlyLink}
+                        >
+                          {item.text}
+                        </a>
+                      ) : (
+                        item.text
+                      )}
+                    </li>
                   ))}
                 </ul>
               </div>
