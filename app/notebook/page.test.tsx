@@ -11,10 +11,9 @@ describe("NotebookPage", () => {
       screen.getByRole("heading", { level: 1, name: "Notebook" })
     ).toBeInTheDocument();
 
-    const untagged = notebookArticles.filter((a) => a.tags.length === 0);
-    expect(screen.getAllByText("TODO: post title")).toHaveLength(
-      untagged.length
-    );
+    for (const article of notebookArticles) {
+      expect(screen.getByText(article.title)).toBeInTheDocument();
+    }
 
     expect(screen.queryAllByRole("heading", { level: 2 })).toHaveLength(0);
   });

@@ -8,9 +8,9 @@ export type NotebookArticle = {
   date?: string;
 };
 
-// TODO: replace placeholders with real posts as they're written — see
-// PRODUCT.md content-integrity rules. Add a tag to label an article on
-// the Notebook page; leave `tags` empty for a general note.
+// Add a tag to label an article on the Notebook page; leave `tags`
+// empty for a general note. See PRODUCT.md content-integrity rules —
+// don't add placeholder entries here, only real (or in-progress) posts.
 export const topFiveSportsMoments: NotebookArticle = {
   title: "Top 5 Sports Moments",
   tags: ["Sports"],
@@ -18,10 +18,4 @@ export const topFiveSportsMoments: NotebookArticle = {
   date: "2026-09-10",
 };
 
-export const notebookArticles: NotebookArticle[] = [
-  { title: "TODO: post title", tags: [] },
-  { title: "TODO: post title", tags: [] },
-  { title: "TODO: post title", tags: [] },
-  { title: "TODO: post title", tags: [] },
-  topFiveSportsMoments,
-];
+export const notebookArticles: NotebookArticle[] = [topFiveSportsMoments];
