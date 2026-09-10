@@ -17,7 +17,7 @@ describe("HeaderName", () => {
   });
 
   it("renders a Home link on every other page", () => {
-    vi.mocked(usePathname).mockReturnValue("/technical/");
+    vi.mocked(usePathname).mockReturnValue("/notebook/");
 
     render(<HeaderName />);
 

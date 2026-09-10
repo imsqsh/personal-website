@@ -1,25 +1,25 @@
 import { describe, expect, it } from "vitest";
 import { render, screen } from "@testing-library/react";
-import LearningsPage from "./page";
-import { learningCategories } from "@/data/learnings";
+import RandomPage from "./page";
+import { randomCategories } from "@/data/random";
 
-describe("LearningsPage", () => {
+describe("RandomPage", () => {
   it("renders a heading and article list for every category", () => {
-    render(<LearningsPage />);
+    render(<RandomPage />);
 
-    expect(learningCategories).toHaveLength(6);
+    expect(randomCategories).toHaveLength(6);
 
-    for (const category of learningCategories) {
+    for (const category of randomCategories) {
       expect(
         screen.getByRole("heading", { level: 2, name: category.name })
       ).toBeInTheDocument();
     }
 
-    const totalArticles = learningCategories.reduce(
+    const totalArticles = randomCategories.reduce(
       (sum, category) => sum + category.articles.length,
       0
     );
-    const linkedArticles = learningCategories
+    const linkedArticles = randomCategories
       .flatMap((category) => category.articles)
       .filter((article) => article.href);
 

@@ -10,8 +10,8 @@ export default function TopFiveSportsMomentsPage() {
   return (
     <div className={styles.wrap}>
       <div className={styles.wrapInner}>
-        <Link href="/learnings" className={styles.back}>
-          ← Learnings
+        <Link href="/random" className={styles.back}>
+          ← Random
         </Link>
         <h1 className={styles.title}>Top 5 Sports Moments</h1>
         <p className={styles.intro}>

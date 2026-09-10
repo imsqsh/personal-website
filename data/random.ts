@@ -1,18 +1,18 @@
-export type LearningArticle = {
+export type RandomArticle = {
   title: string;
   /** Link to the full article/page, if one exists yet. */
   href?: string;
 };
 
-export type LearningCategory = {
+export type RandomCategory = {
   name: string;
-  articles: LearningArticle[];
+  articles: RandomArticle[];
 };
 
 // TODO: replace remaining placeholders with real article links once
 // individual pages exist for each. Titles are placeholders — see
 // PRODUCT.md content-integrity rules.
-export const learningCategories: LearningCategory[] = [
+export const randomCategories: RandomCategory[] = [
   {
     name: "Music",
     articles: [
@@ -24,7 +24,7 @@ export const learningCategories: LearningCategory[] = [
   {
     name: "Sports",
     articles: [
-      { title: "Top 5 Sports Moments", href: "/learnings/top-5-sports-moments" },
+      { title: "Top 5 Sports Moments", href: "/random/top-5-sports-moments" },
       { title: "TODO: article title" },
       { title: "TODO: article title" },
     ],
