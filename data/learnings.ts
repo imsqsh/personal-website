@@ -1,57 +1,64 @@
-export type LearningCategory = {
-  name: string;
-  articles: string[];
+export type LearningArticle = {
+  title: string;
+  /** Link to the full article/page, if one exists yet. */
+  href?: string;
 };
 
-// TODO: replace with real article links once individual pages exist for
-// each. Titles are placeholders — see PRODUCT.md content-integrity rules.
+export type LearningCategory = {
+  name: string;
+  articles: LearningArticle[];
+};
+
+// TODO: replace remaining placeholders with real article links once
+// individual pages exist for each. Titles are placeholders — see
+// PRODUCT.md content-integrity rules.
 export const learningCategories: LearningCategory[] = [
   {
     name: "Music",
     articles: [
-      "TODO: article title",
-      "TODO: article title",
-      "TODO: article title",
+      { title: "TODO: article title" },
+      { title: "TODO: article title" },
+      { title: "TODO: article title" },
     ],
   },
   {
     name: "Sports",
     articles: [
-      "TODO: article title",
-      "TODO: article title",
-      "TODO: article title",
+      { title: "Top 5 Sports Moments", href: "/learnings/top-5-sports-moments" },
+      { title: "TODO: article title" },
+      { title: "TODO: article title" },
     ],
   },
   {
     name: "Travel",
     articles: [
-      "TODO: article title",
-      "TODO: article title",
-      "TODO: article title",
+      { title: "TODO: article title" },
+      { title: "TODO: article title" },
+      { title: "TODO: article title" },
     ],
   },
   {
     name: "Food",
     articles: [
-      "TODO: article title",
-      "TODO: article title",
-      "TODO: article title",
+      { title: "TODO: article title" },
+      { title: "TODO: article title" },
+      { title: "TODO: article title" },
     ],
   },
   {
     name: "Games",
     articles: [
-      "TODO: article title",
-      "TODO: article title",
-      "TODO: article title",
+      { title: "TODO: article title" },
+      { title: "TODO: article title" },
+      { title: "TODO: article title" },
     ],
   },
   {
     name: "Books",
     articles: [
-      "TODO: article title",
-      "TODO: article title",
-      "TODO: article title",
+      { title: "TODO: article title" },
+      { title: "TODO: article title" },
+      { title: "TODO: article title" },
     ],
   },
 ];

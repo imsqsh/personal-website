@@ -16,3 +16,6 @@ PRODUCT.md
 /out/
 next-env.d.ts
 *.tsbuildinfo
+
+# Playwright MCP artifacts
+/.playwright-mcp/

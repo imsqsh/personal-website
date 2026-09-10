@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { learningCategories } from "@/data/learnings";
 import styles from "./page.module.css";
 
@@ -16,7 +17,11 @@ export default function LearningsPage() {
               <ul className={styles.articleList}>
                 {category.articles.map((article, index) => (
                   <li key={index} className={styles.article}>
-                    {article}
+                    {article.href ? (
+                      <Link href={article.href}>{article.title}</Link>
+                    ) : (
+                      article.title
+                    )}
                   </li>
                 ))}
               </ul>
